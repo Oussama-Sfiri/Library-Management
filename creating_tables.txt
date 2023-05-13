@@ -1,0 +1,32 @@
+
+CREATE DATABASE bibliotheque;
+
+CREATE TABLE bibliotheque.livres (
+  id_livre INT PRIMARY KEY,
+  titre VARCHAR(255),
+  auteurs VARCHAR(255),
+  maison_d_edition VARCHAR(255),
+  nombre_de_pages INT,
+  nombre_de_copies INT
+);
+
+CREATE TABLE bibliotheque.registered_people (
+  id_personne INTEGER PRIMARY KEY AUTOINCREMENT,
+  nom TEXT NOT NULL,
+  prenom TEXT NOT NULL,
+  addresse TEXT NOT NULL,
+  statut TEXT NOT NULL,
+  email TEXT NOT NULL,
+  livres_empruntes INTEGER DEFAULT 0,
+);
+
+CREATE TABLE bibliotheque.livre_emprunte (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id_livre INTEGER NOT NULL,
+  id_personne INTEGER NOT NULL,
+  date_emprunt DATE NOT NULL,
+  date_echeance DATE NOT NULL,
+  date_retour DATE,
+  en_cours BOOLEAN DEFAULT 0,
+  FOREIGN KEY (id_personne) REFERENCES personne_enregistree(id_personne)
+);

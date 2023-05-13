@@ -1,0 +1,47 @@
+-- Insertion de données dans la table "livres"
+INSERT INTO bibliotheque.livres (id_livre, titre, auteurs, maison_d_edition, nombre_de_pages, nombre_de_copies)
+VALUES 
+  (1, 'Le Petit Prince', 'Antoine de Saint-Exupéry', 'Gallimard', 96, 5),
+  (2, 'Harry Potter à l\'école des sorciers', 'J.K. Rowling', 'Gallimard Jeunesse', 320, 10),
+  (3, '1984', 'George Orwell', 'Secker & Warburg', 328, 3),
+  (4, 'Le Comte de Monte-Cristo', 'Alexandre Dumas', 'Ponsonby et Weldrick', 1312, 2),
+  (5, 'Le Vieil Homme et la Mer', 'Ernest Hemingway', 'Scribner', 127, 4),
+  (6, 'Le Rouge et le Noir', 'Stendhal', 'Levasseur', 576, 1),
+  (7, 'Les Misérables', 'Victor Hugo', 'A. Lacroix, Verboeckhoven & Cie', 1463, 6),
+  (8, 'Guerre et Paix', 'Léon Tolstoï', 'The Russian Messenger', 1225, 3),
+  (9, 'L\'Étranger', 'Albert Camus', 'Gallimard', 123, 2),
+  (10, 'La Nausée', 'Jean-Paul Sartre', 'Gallimard', 178, 1),
+  (11, 'Les Fleurs du Mal', 'Charles Baudelaire', 'Auguste Poulet-Malassis', 292, 5),
+  (12, 'Le Horla', 'Guy de Maupassant', 'Paul Ollendorff', 64, 3);
+
+-- Insertion de données dans la table "registered_people"
+INSERT INTO bibliotheque.registered_people (nom, prenom, addresse, statut, email, livres_empruntes)
+VALUES 
+  ('Dupont', 'Jean', 'Rue du Commerce, Paris', 'Etudiant', 'jean.dupont@gmail.com', 0),
+  ('Martin', 'Sophie', 'Avenue des Champs-Élysées, Paris', 'Professeur', 'sophie.martin@gmail.com', 0),
+  ('Lefebvre', 'Marie', 'Place de la République, Lyon', 'Etudiante', 'marie.lefebvre@gmail.com', 0),
+  ('Durand', 'Pierre', 'Boulevard Haussmann, Paris', 'Ingénieur', 'pierre.durand@gmail.com', 0),
+  ('Leclerc', 'Camille', 'Rue du Faubourg Saint-Antoine, Paris', 'Architecte', 'camille.leclerc@gmail.com', 0),
+  ('Rousseau', 'Julien', 'Quai de la Rapée, Paris', 'Journaliste', 'julien.rousseau@gmail.com', 0),
+  ('Leroy', 'Anne', 'Rue des Rosiers, Paris', 'Avocate' , 'anne.leroy@gmail.com' , 0),
+  ('Morin', 'Lucie', 'Rue de la Paix, Paris', 'Étudiante', 'lucie.morin@gmail.com', 0),
+  ('Girard', 'Thierry', 'Rue Saint-Martin, Paris', 'Ingénieur', 'thierry.girard@gmail.com', 0),
+  ('Lacroix', 'Nathalie', 'Rue de la Roquette, Paris', 'Professeur', 'nathalie.lacroix@gmail.com', 0),
+  ('Gauthier', 'Marc', 'Rue des Martyrs, Paris', 'Médecin', 'marc.gauthier@gmail.com', 0),
+  ('Lecomte', 'Aurélie', 'Avenue de la République, Paris', 'Avocate', 'aurelie.lecomte@gmail.com', 0);
+
+-- Insertion de données dans la table "livre_emprunte"
+INSERT INTO bibliotheque.livre_emprunte (id_livre, id_personne, date_emprunt, date_echeance, date_retour, en_cours)
+VALUES
+ (1, 1, '2023-05-01', DATE_ADD('2023-05-01', INTERVAL 30 DAY), NULL, TRUE),
+ (2, 2, '2023-05-02', DATE_ADD('2023-05-02', INTERVAL 30 DAY), NULL, TRUE),
+ (3, 3, '2023-05-03', DATE_ADD('2023-05-03', INTERVAL 30 DAY), NULL, TRUE),
+ (4, 4, '2023-05-04', DATE_ADD('2023-05-04', INTERVAL 30 DAY), NULL, TRUE),
+ (5, 5, '2023-05-05', DATE_ADD('2023-05-05', INTERVAL 30 DAY), NULL, TRUE),
+ (6, 6, '2023-05-06', DATE_ADD('2023-05-06', INTERVAL 30 DAY), NULL, TRUE),
+ (7, 1, '2023-05-07', DATE_ADD('2023-05-07', INTERVAL 30 DAY), NULL, TRUE),
+ (8, 2, '2023-05-08', DATE_ADD('2023-05-08', INTERVAL 30 DAY), NULL, TRUE),
+ (9, 3, '2023-05-09', DATE_ADD('2023-05-09', INTERVAL 30 DAY), NULL, TRUE),
+ (10, 4, '2023-05-10', DATE_ADD('2023-05-10', INTERVAL 30 DAY), NULL, TRUE),
+ (11, 5, '2023-05-11', DATE_ADD('2023-05-11', INTERVAL 30 DAY), NULL, TRUE),
+ (12, 6, '2023-05-12', DATE_ADD('2023-05-12', INTERVAL 30 DAY), NULL, TRUE);
