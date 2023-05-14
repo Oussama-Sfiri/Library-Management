@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php  include "connect.php" ; ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <?php  include "connect.php" ; ?>
+    
     <title>bibliothèque</title> 
 </head>
 <body>
@@ -21,19 +22,19 @@
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="index.html">
+                <li><a href="index.php">
                     <i class="uil uil-estate"></i>
-                    <span class="link-name">Pricipale</span>
+                    <span class="link-name">Principale</span>
                 </a></li>
-                <li><a href="gestionLivres.html">
+                <li><a href="gestionLivres.php">
                     <i class="uil uil-files-landscapes"></i>
                     <span class="link-name">Gestion des livres</span>
                 </a></li>
-                <li><a href="gestionUsagers.html">
+                <li><a href="gestionUsagers.php">
                     <i class="uil uil-chart"></i>
                     <span class="link-name">Gestion des usagers</span>
                 </a></li>
-                <li><a href="gestionEmprunts.html">
+                <li><a href="gestionEmprunts.php">
                     <i class="uil uil-share"></i>
                     <span class="link-name">Gestion des emprunts</span>
                 </a></li>
@@ -59,11 +60,6 @@
     <section class="dashboard">
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
-
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="chercher livre ou personne ...">
-            </div>
             
         </div>
 
