@@ -28,7 +28,7 @@ INSERT INTO bibliotheque.usagers (nom, prenom, addresse, statut, email, livres_e
 VALUES
   ('Dupont', 'Luc', '3 rue des Champs', 'étudiant', 'luc.dupont@example.com', 0),
   ('Martin', 'Sophie', '21 rue des Fleurs', 'enseignant', 'sophie.martin@example.com', 0),
-  ('Lefebvre', 'Marie', '7 avenue des Lilas', 'étudiant', 'marie.lefebvre@example.com', 0);
+  ('Lefebvre', 'Marie', '7 avenue des Lilas', 'étudiant', 'marie.lefebvre@example.com', 0),
   ('Dupont', 'Luc', '3 rue des Champs', 'étudiant', 'luc.dupont@example.com', 0),
   ('Martin', 'Sophie', '21 rue des Fleurs', 'enseignant', 'sophie.martin@example.com', 0),
   ('Lefebvre', 'Marie', '7 avenue des Lilas', 'étudiant', 'marie.lefebvre@example.com', 0),
