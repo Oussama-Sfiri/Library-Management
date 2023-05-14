@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
+    <?php  include "connect.php" ; ?>
     <title>bibliothèque</title> 
 </head>
 <body>
@@ -80,10 +80,11 @@
                         <span class="text">Total livres</span>
                         <span class="number">
                             <?php
-                            <!--SELECT COUNT(id) FROM table_name;-->
-
-
-
+                            $selectSQL = "SELECT COUNT(*) as count FROM `livres`";
+                                $result=@mysql_query($selectSQL,$idcon);
+                                $row = mysql_fetch_assoc($result);
+                                $livres = $row['count'];
+                                echo "$livres" ;
                             ?>
                         </span>
                     </div>
@@ -92,10 +93,11 @@
                         <span class="text">Total usagers</span>
                         <span class="number">
                             <?php
-
-                            <!--SELECT COUNT(id) FROM table_name;-->
-
-
+                            $selectSQL = "SELECT COUNT(*) as count FROM `usagers`";
+                            $result=@mysql_query($selectSQL,$idcon);
+                            $row = mysql_fetch_assoc($result);
+                            $usagers = $row['count'];
+                            echo "$usagers" ;
                             ?>
                         </span>
                     </div>
@@ -104,12 +106,11 @@
                         <span class="text">Total emprunts</span>
                         <span class="number">
                             <?php
-                            
-                            <!--SELECT COUNT(id) FROM table_name;-->
-
-
-
-                            
+                            $selectSQL = "SELECT COUNT(*) as count FROM `emprunts`";
+                            $result=@mysql_query($selectSQL,$idcon);
+                            $row = mysql_fetch_assoc($result);
+                            $emprunt = $row['count'];
+                            echo "$emprunt" ;
                             ?>
                         </span>
                     </div>
