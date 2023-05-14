@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php  include "connect.php" ; ?>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <?php  include "connect.php" ; ?>
+    
     <title>bibliothèque</title> 
 </head>
 <body>
@@ -81,8 +83,8 @@
                         <span class="number">
                             <?php
                             $selectSQL = "SELECT COUNT(*) as count FROM `livres`";
-                                $result=@mysql_query($selectSQL,$idcon);
-                                $row = mysql_fetch_assoc($result);
+                                $result=@mysqli_query($idcon,$selectSQL);
+                                $row = mysqli_fetch_assoc($result);
                                 $livres = $row['count'];
                                 echo "$livres" ;
                             ?>
@@ -94,8 +96,8 @@
                         <span class="number">
                             <?php
                             $selectSQL = "SELECT COUNT(*) as count FROM `usagers`";
-                            $result=@mysql_query($selectSQL,$idcon);
-                            $row = mysql_fetch_assoc($result);
+                            $result=@mysqli_query($idcon,$selectSQL);
+                            $row = mysqli_fetch_assoc($result);
                             $usagers = $row['count'];
                             echo "$usagers" ;
                             ?>
@@ -107,8 +109,8 @@
                         <span class="number">
                             <?php
                             $selectSQL = "SELECT COUNT(*) as count FROM `emprunts`";
-                            $result=@mysql_query($selectSQL,$idcon);
-                            $row = mysql_fetch_assoc($result);
+                            $result=@mysqli_query($idcon,$selectSQL);
+                            $row = mysqli_fetch_assoc($result);
                             $emprunt = $row['count'];
                             echo "$emprunt" ;
                             ?>
