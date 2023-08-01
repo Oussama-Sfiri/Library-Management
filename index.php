@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     
-    <title>bibliothèque</title> 
+    <title>Library Management</title> 
 </head>
 <body>
     <nav>
@@ -17,7 +17,7 @@
                 <img src="images/logo.jpg" alt="library logo">
             </div>
 
-            <span class="logo_name">Gestion bibliothèque </span>
+            <span class="logo_name">Bibliothèque ENSAA</span>
         </div>
 
         <div class="menu-items">
